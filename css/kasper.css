@@ -274,25 +274,16 @@ header .container .search i {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
 }
-.services .service-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 30px;
+@media (min-width: 768px) {
+  .services .service-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 30px;
+  }
 }
 .services .service-content .serv {
   display: flex;
   margin: 20px auto;
-}
-@media (max-width: 768px) {
-  .services .service-content {
-    display: block;
-  }
-  .services .service-content .serv {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
 }
 .services .service-content .serv i {
   font-size: 40px;
@@ -300,6 +291,17 @@ header .container .search i {
 }
 .services .service-content .serv .content {
   padding-left: 50px;
+}
+@media (max-width: 768px) {
+  .services .service-content .serv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .services .service-content .serv .content {
+    padding-left: 0;
+  }
 }
 .services .service-content .serv .content h3 {
   padding-bottom: 15px;
@@ -618,16 +620,6 @@ header .container .search i {
   display: flex;
   margin-bottom: var(--main-padding);
 }
-@media (max-width: 768px) {
-  .our-skills .container {
-    grid-gap: 50px;
-  }
-  .our-skills .container .testimonial .testimonial-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
 .our-skills .container .testimonial .testimonial-content img {
   width: 85px;
   border-radius: 50%;
@@ -637,6 +629,19 @@ header .container .search i {
 .our-skills .container .testimonial .testimonial-content .test-content {
   border-bottom: 1px solid var(--light-color);
   margin-left: 40px;
+}
+@media (max-width: 768px) {
+  .our-skills .container {
+    grid-gap: 50px;
+  }
+  .our-skills .container .testimonial .testimonial-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .our-skills .container .testimonial .testimonial-content .test-content {
+    margin-left: 0;
+  }
 }
 .our-skills .container .testimonial .testimonial-content .testimonial-text {
   font-size: 15px;
